@@ -33,3 +33,24 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
         track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
     }
 }
+
+/*=============== SHOW SIDEBAR ===============*/
+const navMenu = document.getElementById('sidebar'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
+
+/*===== SIDEBAR SHOW =====*/
+/* Validateant Exists */
+if(navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add('show-sidebar')
+    })
+}
+
+/*===== SIDEBAR HIDDEN =====*/
+/* Validate If Constant Exists */
+if(navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar')
+    })
+}

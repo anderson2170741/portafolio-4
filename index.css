@@ -7,13 +7,14 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     z-index: 0;
 }
 
 body {
-    background-color: #04041c;
+    background-color: var(--azul_oscuro);
     align-items: center;
     font-size: 18px;
     color: var(--blanco);
@@ -28,13 +29,6 @@ h1 {
 h2 {
     font-size: 50px;
     color: var(--cian_moderado);
-}
-
-header {
-    margin: 0 auto;
-    width: 93%;
-    max-width: 1350px;
-    height: 100px;
 }
 
 nav {
@@ -61,11 +55,17 @@ a>samp:hover {
     color: var(--blanco);
 }
 
+.sidebar {
+    margin: 0 auto;
+    width: 93%;
+    max-width: 1350px;
+    height: 100px;
+}
 
 .contenedor {
     margin: 0 auto;
     width: 84%;
-    max-width: 1128px;
+    max-width: 1124px;
 }
 
 .presentacion {
@@ -135,7 +135,7 @@ a>samp:hover {
 
 .circulo img {
     position: absolute;
-    top: 75px;
+    top: 105px;
 }
 
 .rectangulo {
@@ -262,20 +262,20 @@ a>samp:hover {
     background-color: var(--cian_moderado);
 }
 
-#mis_portafolio{
+#mis_portafolio {
     margin: 0 auto;
     padding-top: 65px;
     width: 92%;
 }
 
-#mis_portafolio h2{
+#mis_portafolio h2 {
     text-align: center;
     padding-bottom: 45px;
 }
 
 /* images */
 
-.slick-list{
+.slick-list {
     position: relative;
     display: flex;
     align-items: center;
@@ -284,7 +284,8 @@ a>samp:hover {
     margin: 0px auto;
     overflow: hidden;
 }
-.slick-track{
+
+.slick-track {
     position: relative;
     top: 0;
     left: 0;
@@ -292,7 +293,8 @@ a>samp:hover {
     justify-content: center;
     transition: .5s ease-in-out;
 }
-.slick{
+
+.slick {
     position: relative;
     width: 450px;
     float: left;
@@ -301,20 +303,21 @@ a>samp:hover {
     height: 100%;
 }
 
-.slick img{
+.slick img {
     object-fit: cover;
     height: 350px;
     width: 435px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
     transition: .3s ease-in-out;
 }
-.slick img:hover{
+
+.slick img:hover {
     opacity: .85;
 }
 
 /* buttons */
 
-.slick-arrow{
+.slick-arrow {
     border-radius: 30px;
     position: absolute;
     z-index: 3;
@@ -325,18 +328,22 @@ a>samp:hover {
     border: 0;
     cursor: pointer;
 }
-.slick-arrow:focus{
+
+.slick-arrow:focus {
     outline: 0;
 }
-.slick-arrow svg{
+
+.slick-arrow svg {
     width: 15px;
     height: 100%;
     color: var(--cian_moderado);
 }
-.slick-prev{
+
+.slick-prev {
     left: 0px;
 }
-.slick-next{
+
+.slick-next {
     right: 0px;
 }
 
@@ -355,6 +362,7 @@ a>samp:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .contactoTarjetas {
     display: flex;
     justify-content: space-between;
@@ -398,3 +406,95 @@ footer {
     font-weight: 200;
     color: var(--cian_moderado);
 }
+
+@media screen and (max-width: 1408px) {
+    #servicios {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 1216px) {
+    .tarjetas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-150%);
+    }
+
+    .nav__toggle>img {
+        position: relative;
+        top: 20px;
+        left: 610px;
+        width: 30px;
+        height: 30px;
+        fill: var(--blanco);
+        filter: invert(100%);
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .presentacion {
+        width: 420px;
+        position: relative;
+        top: 800px;
+        left: 50px; 
+        text-align: center;
+        background-color: #242635;
+    }
+
+    #verbo {
+        width: 1100%;
+        border-bottom: none;
+        text-align: center;
+    }
+
+    .circulo {
+        margin: 0 auto;
+        width: 42rem;
+        height: 42rem;
+        border-radius: 50%;
+        background-color: var(--azul_grisáceo);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circulo img {
+        box-sizing: border-box;
+        display: block;
+        width: 500px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+        height: 700px;       /*Alto de la imagen nueva, aunque en este caso son iguales.*/
+        padding-left: 115px;
+        background-image: url("/Logos-Imágenes/photo\ mobile.png");
+    }
+
+
+    /*#verbo {
+        width: 16rem;
+        border-bottom: 3px solid var(--blanco);
+        padding-bottom: 5px;
+    }*/
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 350px) {}
